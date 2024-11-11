@@ -1,0 +1,5 @@
+{:store :database
+ :migration-dir "migrations"
+ :db {:jdbc-url "jdbc:postgresql://db:5432/mi_api_rest_db"
+      :username "usuario"
+      :password "contraseña"}}
