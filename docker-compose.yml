@@ -22,9 +22,6 @@ services:
       # Otras variables de entorno necesarias para tu aplicación
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
-      - /app/target
     depends_on:
       - db
     networks:

@@ -10,6 +10,9 @@ echo "PostgreSQL está disponible."
 
 # Ejecutar migraciones
 echo "Ejecutando migraciones..."
+ls -laF
+whoami
+pwd
 java -jar mi-api-rest.jar migrate
 
 # Iniciar la aplicación

@@ -13,6 +13,7 @@
                  [ring/ring-jetty-adapter "1.9.6"]
                  [org.clojure/tools.cli "1.0.206"]; <-- Añade esta línea
                  [cheshire "5.10.0"]]
+  :uberjar-name "mi-api-rest.jar"  ;; Añade esta línea
   :main ^:skip-aot mi-api-rest.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
