@@ -3,8 +3,11 @@
             [next.jdbc.sql :as sql]))
 
 (defn get-datasource []
-  (jdbc/get-datasource {:jdbc-url (System/getenv "DATABASE_URL")
-                        :username "usuario"
+  (jdbc/get-datasource {:dbtype "postgresql"
+                        :host "db"
+                        :port 5432
+                        :dbname "mi_api_rest_db"
+                        :user "usuario"
                         :password "password"}))
 
 (defn obtener-todos []

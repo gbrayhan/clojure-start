@@ -10,10 +10,12 @@
   (clojure.edn/read-string (slurp "resources/migratus.edn")))
 
 (defn run-migrations []
-  (migratus/migrate {:config (read-config)}))
+  ;; Pasa la configuración directamente a Migratus
+  (migratus/migrate (read-config)))
 
 (defn rollback-migrations []
-  (migratus/rollback {:config (read-config)}))
+  ;; Pasa la configuración directamente a Migratus
+  (migratus/rollback (read-config)))
 
 (defn start-server []
   (jetty/run-jetty app {:port 3000 :join? false}))
