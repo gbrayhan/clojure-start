@@ -11,9 +11,10 @@
                  [migratus "1.3.6"]
                  [metosin/ring-http-response "0.9.4"]
                  [ring/ring-jetty-adapter "1.9.6"]
-                 [org.clojure/tools.cli "1.0.206"]; <-- Añade esta línea
-                 [cheshire "5.10.0"]]
-  :uberjar-name "mi-api-rest.jar"  ;; Añade esta línea
+                 [org.clojure/tools.cli "1.0.206"]
+                 [cheshire "5.10.0"]
+                 [ring/ring-json "0.5.1"]]
+  :uberjar-name "mi-api-rest.jar"
   :main ^:skip-aot mi-api-rest.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
