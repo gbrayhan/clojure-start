@@ -1,5 +1,5 @@
 # Etapa de construcción usando Leiningen
-FROM clojure:lein-2.9.7 as build
+FROM clojure:lein-2.9.7 AS build
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -16,6 +16,11 @@ RUN lein uberjar
 
 # Etapa de ejecución
 FROM openjdk:17-jdk-slim
+
+# Instalar netcat
+RUN apt-get update && \
+    apt-get install -y netcat && \
+    rm -rf /var/lib/apt/lists/*
 
 # Establecer el directorio de trabajo
 WORKDIR /app

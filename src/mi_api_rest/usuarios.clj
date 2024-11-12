@@ -5,23 +5,21 @@
 (defn get-datasource []
   (jdbc/get-datasource {:jdbc-url (System/getenv "DATABASE_URL")
                         :username "usuario"
-                        :password "contraseña"}))
-
-(def ds (get-datasource))
+                        :password "password"}))
 
 (defn obtener-todos []
-  (sql/query ds ["SELECT * FROM usuarios"]))
+  (sql/query (get-datasource) ["SELECT * FROM usuarios"]))
 
 (defn obtener-por-id [id]
-  (sql/get-by-id ds :usuarios id))
+  (sql/get-by-id (get-datasource) :usuarios id))
 
 (defn crear-usuario [usuario]
-  (sql/insert! ds :usuarios usuario))
+  (sql/insert! (get-datasource) :usuarios usuario))
 
 (defn actualizar-usuario [id usuario]
-  (let [result (sql/update! ds :usuarios usuario {:id id})]
+  (let [result (sql/update! (get-datasource) :usuarios usuario {:id id})]
     (not (empty? result))))
 
 (defn eliminar-usuario [id]
-  (let [result (sql/delete! ds :usuarios {:id id})]
+  (let [result (sql/delete! (get-datasource) :usuarios {:id id})]
     (not (empty? result))))

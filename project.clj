@@ -9,6 +9,9 @@
                  [org.postgresql/postgresql "42.3.1"]
                  [seancorfield/next.jdbc "1.2.659"]
                  [migratus "1.3.6"]
+                 [metosin/ring-http-response "0.9.4"]
+                 [ring/ring-jetty-adapter "1.9.6"]
+                 [org.clojure/tools.cli "1.0.206"]; <-- Añade esta línea
                  [cheshire "5.10.0"]]
   :main ^:skip-aot mi-api-rest.core
   :target-path "target/%s"

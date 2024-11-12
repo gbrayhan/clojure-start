@@ -5,7 +5,7 @@ services:
     container_name: mi_api_rest_db
     environment:
       POSTGRES_USER: usuario
-      POSTGRES_PASSWORD: contraseña
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: mi_api_rest_db
     volumes:
       - db-data:/var/lib/postgresql/data
