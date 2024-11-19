@@ -1,16 +1,13 @@
 #!/bin/bash
 
-# Verifica si el directorio actual es un repositorio Git
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-    echo "Este script debe ejecutarse dentro de un repositorio Git."
+    echo "This script must be run inside a Git repository."
     exit 1
 fi
 
-# Obtiene la lista de archivos no ignorados por .gitignore
-# Usamos -z para manejar correctamente nombres con espacios y caracteres especiales
 git ls-files --cached --others --exclude-standard -z | while IFS= read -r -d '' file; do
-    echo "Archivo: $file"
-    echo "Contenido:"
+    echo "File: $file"
+    echo "Content:"
     echo "----------------------------------------"
     cat "$file"
     echo "----------------------------------------"

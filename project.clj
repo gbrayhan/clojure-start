@@ -1,5 +1,5 @@
-(defproject mi-api-rest "0.1.0-SNAPSHOT"
-  :description "API REST en Clojure conectada a PostgreSQL"
+(defproject my-api-rest "0.1.0-SNAPSHOT"
+  :description "REST API in Clojure connected to PostgreSQL"
   :repositories [["central" "https://repo1.maven.org/maven2/"]
                  ["clojars" "https://repo.clojars.org/"]]
   :dependencies [[org.clojure/clojure "1.11.1"]
@@ -14,9 +14,9 @@
                  [org.clojure/tools.cli "1.0.206"]
                  [cheshire "5.10.0"]
                  [ring/ring-json "0.5.1"]]
-  :uberjar-name "mi-api-rest.jar"
-  :main ^:skip-aot mi-api-rest.core
+  :uberjar-name "my-api-rest.jar"
+  :main ^:skip-aot my-api-rest.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
-  :aliases {"migrate" ["run" "-m" "mi-api-rest.core" "migrate"]
-            "rollback" ["run" "-m" "mi-api-rest.core" "rollback"]})
+  :aliases {"migrate" ["run" "-m" "my-api-rest.core" "migrate"]
+            "rollback" ["run" "-m" "my-api-rest.core" "rollback"]})
