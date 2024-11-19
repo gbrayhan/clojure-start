@@ -1,6 +1,6 @@
-(ns mi-api-rest.core
+(ns my-api-rest.core
   (:require [migratus.core :as migratus]
-            [mi-api-rest.routes :refer [app]]
+            [my-api-rest.routes :refer [app]]
             [ring.adapter.jetty :as jetty]
             [clojure.tools.cli :refer [parse-opts]]
             [clojure.string :as str])

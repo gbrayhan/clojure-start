@@ -1,6 +1,6 @@
-(ns mi-api-rest.routes
+(ns my-api-rest.routes
   (:require [reitit.ring :as ring]
-            [mi-api-rest.usuarios :as usuarios]
+            [my-api-rest.usuarios :as usuarios]
             [ring.util.http-response :as response]
             [cheshire.core :as json]
             [ring.middleware.json :refer [wrap-json-response wrap-json-body]]))

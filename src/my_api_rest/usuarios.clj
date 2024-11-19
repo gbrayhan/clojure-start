@@ -1,4 +1,4 @@
-(ns mi-api-rest.usuarios
+(ns my-api-rest.usuarios
   (:require [next.jdbc :as jdbc]
             [next.jdbc.sql :as sql]))
 
