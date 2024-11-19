@@ -15,7 +15,7 @@ services:
 
   app:
     build: .
-    container_name: mi_api_rest_app
+    container_name: clojure_api_rest_app
     environment:
       DATABASE_URL: "jdbc:postgresql://db:5432/mi_api_rest_db"
       # Otras variables de entorno necesarias para tu aplicación

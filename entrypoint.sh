@@ -1,20 +1,17 @@
 #!/bin/bash
 set -e
 
-# Esperar a que la base de datos esté lista
-echo "Esperando a que PostgreSQL esté disponible..."
+echo "Waiting for PostgreSQL to be available..."
 while ! nc -z db 5432; do
   sleep 0.1
 done
-echo "PostgreSQL está disponible."
+echo "PostgreSQL is available."
 
-# Ejecutar migraciones
-echo "Ejecutando migraciones..."
+echo "Running migrations..."
 ls -laF
 whoami
 pwd
-java -jar mi-api-rest.jar migrate
+java -jar my-api-rest.jar migrate
 
-# Iniciar la aplicación
-echo "Iniciando la aplicación..."
-java -jar mi-api-rest.jar
+echo "Starting the application..."
+java -jar my-api-rest.jar
