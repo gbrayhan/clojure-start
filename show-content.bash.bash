@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the blacklist of directories (relative to the repository root)
-BLACKLIST_DIRS=(".github" ".idea" "path/another_directory")
+BLACKLIST_DIRS=(".github" ".idea" "path/another_directory" "target" ".clj-kondo" ".lsp")
 
 # Define the blacklist of files (relative to the repository root)
 BLACKLIST_FILES=(".dockerignore" "CODE_OF_CONDUCT.md" "README.md" "SECURITY.md" "CONTRIBUTING.md" "LICENSE" "show-content.bash" ".gitignore")
